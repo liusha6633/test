@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ApiSuite" parallel="classes" thread-count="1">
+	<parameter name="report.config" value="src/main/config/extent-config.xml"/> 
+	<parameter name="system.info" value="Listener.MySystemInfo"/>
+
+    <test verbose="2" preserve-order="true" name="Test1">  
+        <classes>
+            <class name="com.qa.tests.DemoTest"/>
+        </classes>
+    </test>
+      <listeners>
+        <listener class-name="Listener.MyExtentTestNgFormatter"/>
+    </listeners>  
+</suite> 
